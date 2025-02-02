@@ -50,7 +50,7 @@ let randonNumber = Math.floor(Math.random()*olympicTrivia.length);
 let userAnswer = prompt(olympicTrivia[randonNumber].question);
 
 //set counter on page
-questionNumber.innerHTML = randonNumber;
+questionNumber.innerHTML = randonNumber + 1;
 
 //answer alert
 if (userAnswer){
