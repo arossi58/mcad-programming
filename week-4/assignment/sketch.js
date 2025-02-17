@@ -14,7 +14,7 @@ function setup() {
   textAlign(CENTER, TOP);
 }
 
-//wanted the grid to be responsize. this function sets the grid dimensions of 80% of the shortest viewport dimension
+//wanted the grid to be responsize. this function sets the grid dimensions of 70% of the shortest viewport dimension
 function calculateCellSize() {
   //determine smaller of two window dimensions
   let minDimension = min(windowWidth, windowHeight)* .7;
