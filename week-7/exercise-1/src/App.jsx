@@ -6,13 +6,13 @@ const animal = [
   {
       title:"Llama",
       trivia:"Llamas are effective guard animals because of their excellent vision and sense of smell. They are often used to guard herds of alpacas.", 
-      image:"/public/cria.jpg",
+      image:"./cria.jpg",
       alt:"A cute llama looking at you" },
       
   {
       title:"Alpaca",
       trivia:"Around 6000 years ago the Andean people started to domesticate alpacas",
-      image:"/public/alpaca.jpg",
+      image:"./alpaca.jpg",
       alt:"a group of alpacas in the mountains"
   }
 ];
