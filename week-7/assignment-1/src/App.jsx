@@ -18,10 +18,13 @@ function App() {
 
   return (
     <>
-      <h1>Maximum Camera Budget: ${maxPrice}</h1>
-       <div className="camera-grid">
+      <header>
+      <h1>Vintage Cameras!</h1>
+      <h2>Your Budget: ${maxPrice}</h2>
+      </header>
+       <main className="camera-grid">
        {cameraElements}
-        </div> 
+        </main> 
     
     </>
   )

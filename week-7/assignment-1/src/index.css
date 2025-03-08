@@ -11,12 +11,14 @@
   font-family: Karla,  sans-serif;
   font-weight: 400;
   color: black;
+  
 }
 body {
   /* 3. Add accessible line-height */
   line-height: 1.5;
   /* 4. Improve text rendering */
   -webkit-font-smoothing: antialiased;
+  background-color: #F3F3F3;
 }
 /* 5. Improve media defaults */
 img, picture, video, canvas, svg {
@@ -46,7 +48,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-  text-align: center;
+  font-size: 40px;
 }
 
 h2 {
@@ -65,3 +67,6 @@ p {
   font-size: 14px;
 }
 
+header {
+  text-align: center;
+}
