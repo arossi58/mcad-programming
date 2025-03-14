@@ -2,70 +2,70 @@ const animalData = [
   {
     name: "Tiger",
     nativeTo: "Asia",
-    image: "https://via.placeholder.com/100?text=Tiger",
+    image: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Walking_tiger_female.jpg/1200px-Walking_tiger_female.jpg",
     alt: "A majestic tiger with orange fur and black stripes",
     description: "A large carnivorous cat known for its striking orange coat with black stripes."
   },
   {
     name: "Kangaroo",
     nativeTo: "Australia",
-    image: "https://via.placeholder.com/100?text=Kangaroo",
+    image: "data:image/jpeg;base64,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",
     alt: "A kangaroo standing on its powerful hind legs with a pouch",
     description: "A marsupial known for its powerful hind legs and ability to hop long distances."
   },
   {
     name: "Polar Bear",
     nativeTo: "Arctic",
-    image: "https://via.placeholder.com/100?text=Polar+Bear",
+    image: "https://upload.wikimedia.org/wikipedia/commons/6/66/Polar_Bear_-_Alaska_%28cropped%29.jpg",
     alt: "A large white polar bear walking across the icy Arctic",
     description: "A large bear species adapted to cold climates, known for its thick white fur."
   },
   {
     name: "Elephant",
     nativeTo: "Africa, Asia",
-    image: "https://via.placeholder.com/100?text=Elephant",
+    image: "https://i.natgeofe.com/k/e7ba8001-23ac-457f-aedb-abd5f2fdda62/moms5_4x3.png",
     alt: "A massive gray elephant with large ears and a long trunk",
     description: "The largest land mammal, recognized for its tusks and intelligence."
   },
   {
     name: "Bald Eagle",
     nativeTo: "North America",
-    image: "https://via.placeholder.com/100?text=Bald+Eagle",
+    image: "https://npr.brightspotcdn.com/dims4/default/e2e387e/2147483647/strip/true/crop/2667x2000+0+0/resize/880x660!/quality/90/?url=https%3A%2F%2Fnpr.brightspotcdn.com%2Fdims3%2Fdefault%2Fstrip%2Ffalse%2Fcrop%2F2667x2000%20167%200%2Fresize%2F2667x2000%21%2F%3Furl%3Dhttp%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2F15%2Fa7%2Fbe30c883436c927b96084ed548f3%2Fgettyimages-1010939932.jpg",
     alt: "A bald eagle soaring in the sky with its sharp talons visible",
     description: "A bird of prey and the national symbol of the United States."
   },
   {
     name: "Giraffe",
     nativeTo: "Africa",
-    image: "https://via.placeholder.com/100?text=Giraffe",
+    image: "https://giraffeconservation.org/wp-content/uploads/2024/11/featured-16-9_southern-3-topaz.jpg",
     alt: "A tall giraffe with a long neck and distinctive spotted coat",
     description: "The tallest land animal, known for its long neck and spotted coat."
   },
   {
     name: "Penguin",
     nativeTo: "Antarctica",
-    image: "https://via.placeholder.com/100?text=Penguin",
+    image: "https://storage.googleapis.com/travel-web-app-1.appspot.com/flamelink/media/Weddell%20Sea%20Emperor%20Penguin.jpg?GoogleAccessId=firebase-adminsdk-g2s60%40travel-web-app-1.iam.gserviceaccount.com&Expires=16725243600&Signature=hg9hVgoxbtomqLkHWQrn0ipsZxr9zOnEXpAW7nPXsWdmKfV4BswmLQqDiY7n4LG3edhPTUoqaMnWCw3OojvPFjNZi0iOs%2Fb28ZsouQ%2B4WxKkqTowihMGdzqHvlR%2BlHX1tjf1KItyRAJzjvngKUJI2fMBQWzZNBrOjjliVzvVx0mckWnW0HewATsV2mwidzsf4dWzUq34nfzjmwJYanZPannDpY6GKvCAFMCbY26hbvHll6G0XMwWGTKk4WKHF%2BJtMlH6JsdlflKnR%2B47b3K6Ns8r9jms9FOiG0pA9nF9kuez75qxRvpcKKEHLAnXmN9a6057%2BfvbF2Z2lhSjLHVYZw%3D%3D",
     alt: "A black and white penguin waddling on ice",
     description: "A flightless bird that is an excellent swimmer, thriving in cold climates."
   },
   {
     name: "Wolf",
     nativeTo: "North America, Europe, Asia",
-    image: "https://via.placeholder.com/100?text=Wolf",
+    image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJA3XlgJeQhMqyiyO-PVu3A9Us6I2O5ROElQ&s",
     alt: "A gray wolf standing alert with piercing eyes",
     description: "A highly social carnivore that lives and hunts in packs."
   },
   {
     name: "Orangutan",
     nativeTo: "Borneo, Sumatra",
-    image: "https://via.placeholder.com/100?text=Orangutan",
+    image: "https://i0.wp.com/www.sciencenews.org/wp-content/uploads/2021/11/111721_bb_orangutan_feat.jpg?fit=1030%2C580&ssl=1",
     alt: "An orangutan swinging through the trees with long arms",
     description: "An intelligent great ape known for its reddish fur and tree-dwelling habits."
   },
   {
     name: "Panda",
     nativeTo: "China",
-    image: "https://via.placeholder.com/100?text=Panda",
+    image: "https://wwfgifts-files.worldwildlife.org/wwfgifts/images/panda-landing-photo.jpg",
     alt: "A giant panda eating bamboo with its black and white fur",
     description: "A bear species famous for its black and white coat and love for bamboo."
   }
