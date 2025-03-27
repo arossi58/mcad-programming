@@ -24,7 +24,7 @@ function App() {
           </h5>
         </div>
         <div>
-          <label htmlFor="firstName">First Name:</label>
+          <label htmlFor="firstName">First Name:*</label>
           <input
             type="text"
             id="firstName"
@@ -35,7 +35,7 @@ function App() {
           {errors.firstName && <p className="error">{errors.firstName.message}</p>}
         </div>
         <div>
-          <label htmlFor="lastName">Last Name:</label>
+          <label htmlFor="lastName">Last Name:*</label>
           <input
             type="text"
             id="lastName"
@@ -46,7 +46,7 @@ function App() {
           {errors.lastName && <p className="error">{errors.lastName.message}</p>}
         </div>
         <div>
-          <label htmlFor="streetAddress">Street Address:</label>
+          <label htmlFor="streetAddress">Street Address:*</label>
           <input
             type="text"
             id="streetAddress"
@@ -56,7 +56,7 @@ function App() {
           {errors.streetAddress && <p className="error">{errors.streetAddress.message}</p>}
         </div>
         <div>
-          <label htmlFor="stateProvince">State/Province:</label>
+          <label htmlFor="stateProvince">State/Province:*</label>
           <input
             type="text"
             id="stateProvince"
@@ -66,7 +66,7 @@ function App() {
           {errors.stateProvince && <p className="error">{errors.stateProvince.message}</p>}
         </div>
         <div>
-          <label htmlFor="country">Country:</label>
+          <label htmlFor="country">Country:*</label>
           <input
             type="text"
             id="country"
