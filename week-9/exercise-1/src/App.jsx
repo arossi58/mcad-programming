@@ -18,24 +18,24 @@ function App() {
           <h5>To join the club we will need to gather some information about your lovely aplaca.</h5>
         </div>
         <div>
-        <label>First Name:</label>
-        <input type="text" {...register('firstName')} />
+        <label htmlFor="firstName">First Name:</label>
+        <input type="text" id="firstName" {...register('firstName')} />
         </div>
         <div>
-          <label>Last Name:</label>
-          <input type="text" {...register('lastName')} />
+          <label htmlFor="lastName">Last Name:</label>
+          <input type="text"  id="lastName"{...register('lastName')} />
         </div>
         <div>
-          <label>Street Address:</label>
-          <input type="text" {...register('streetAddress')} />
+          <label htmlFor="streetAddress">Street Address:</label>
+          <input type="text" id="streetAddress" {...register('streetAddress')} />
         </div>
         <div>
-          <label>State/Province:</label>
-          <input type="text" {...register('stateProvince')} />
+          <label htmlFor="stateProvince">State/Province:</label>
+          <input type="text" id="stateProvince" {...register('stateProvince')} />
         </div>
         <div>
-          <label>Country:</label>
-          <input type="text" {...register('country')} />
+          <label htmlFor="country">Country:</label>
+          <input type="text" id="country" {...register('country')} />
         </div>
         <div>
           <label>Your Alpaca Colors:</label>
