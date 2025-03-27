@@ -38,7 +38,7 @@ function App() {
           <input type="text" {...register('country')} />
         </div>
         <div>
-          <label>Favorite Alpaca Colors:</label>
+          <label>Your Alpaca Colors:</label>
           <div>
             <label>
               <input
@@ -87,7 +87,7 @@ function App() {
               }>
           <h2>Success!!</h2>
            <p>Your Alpaca, 
-            {` ${submittedData.firstName} ${submittedData.lastName}`} 
+            {` ${submittedData.firstName} ${submittedData.lastName} `} 
             is from {`${submittedData.streetAddress}, 
                     ${submittedData.stateProvince}, 
                     ${submittedData.country}`}. {submittedData.firstName} has a gorgeous {submittedData.favoriteAlpacaColors} coat of fur! Your data has been collected, welcome to the club!!
