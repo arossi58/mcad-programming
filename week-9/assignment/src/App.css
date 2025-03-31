@@ -116,3 +116,7 @@ button:hover{
   margin-top: 4px;
   padding: 4px;
 }
+
+.required{ 
+  color: #bd1000;
+}

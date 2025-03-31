@@ -11,33 +11,33 @@ function NewItemForm({ addCard }) {
     }
     addCard(data);
     reset();
-  };
+  }; 
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className="new-item-form">
       <div>
-        <label>Name: </label>
+        <label>Name:<span className='required'>*</span> </label>
         <input
           placeholder="Camera name"
           {...register('name', { required: true })}
         />
-        {errors.name && <span>This field is required</span>}
+        {errors.name && <span className='required'>This field is required</span>}
       </div>
       <div>
-        <label>Price: </label>
+        <label>Price:<span className='required'>*</span> </label>
         <input
           placeholder="Price e.g., $299"
           {...register('price', { required: true })}
         />
-        {errors.price && <span>This field is required</span>}
+        {errors.price && <span className='required'>This field is required</span>}
       </div>
       <div>
-        <label>Image URL: </label>
+        <label>Image URL:<span className='required'>*</span> </label>
         <input
           placeholder="Image URL"
           {...register('imageURL', {required: true})}
         />
-        {errors.imageURL && <span>This field is required</span>}
+        {errors.imageURL && <span className='required'>This field is required</span>}
       </div>
       <div>
         <label>Key Features: </label>
