@@ -1,0 +1,55 @@
+:root {
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img {
+  width: 500px;
+  margin: 0 auto;
+}
+
+.image-container {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.nav {
+  background-color: #333;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  list-style: none;
+}
+
+
+
+
+.nav a {
+  text-decoration: none;
+  color: white;
+  display: block;
+  transition: background-color 0.3s ease;
+  padding: .5rem;
+  margin: .5rem;
+}
+
+
+.nav a:hover {
+  background-color: #555;
+  border-radius: 5px;
+}
+
+.logo {
+  margin-left: auto;
+}
