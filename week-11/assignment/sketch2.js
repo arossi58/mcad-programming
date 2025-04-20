@@ -1,4 +1,4 @@
-// sketch2.js - Wave Pattern
+
 
 function setup() {
     let canvas = createCanvas(400, 400);
@@ -14,7 +14,6 @@ function setup() {
     const waveCount = 10;
     const amplitude = 20;
     
-    // Draw multiple sine waves that animate over time
     for (let i = 0; i < waveCount; i++) {
       let offsetY = map(i, 0, waveCount - 1, 50, height - 50);
       beginShape();
