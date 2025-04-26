@@ -48,13 +48,12 @@ function keyPressed() {
   const semitoneOffset = keyNoteMap[keyChar];
   const rate = pow(2, semitoneOffset / 12);
 
-  // Create new sound from buffer
   const newNote = new p5.SoundFile();
   newNote.buffer = pianoSample.buffer;
-  newNote.play(0, rate); // play immediately with pitch
+  newNote.play(0, rate); 
   newNote.playMode('sustain');
 
-  // Push shape tied to this note
+  
   shapes.push({
     x: random(-width / 2 + 50, width / 2 - 50),
     y: random(-height / 2 + 50, height / 2 - 50),
