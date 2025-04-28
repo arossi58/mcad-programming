@@ -10,7 +10,7 @@ function setup() {
   createCanvas(600, 600, WEBGL);
   cols = w / scl;
   rows = h / scl;
-  frameRate(30);
+  frameRate(20);
   smooth();
 
   for (let x = 0; x < cols; x++) {
@@ -53,14 +53,14 @@ function draw() {
     
       let h1 = terrain[x][y];
       let t1 = map(h1, stripMin, stripMax, 0, 1);
-      let col1 = lerpColor(color('#1C9900'), color('#FFFFFF'), t1);
+      let col1 = lerpColor(color('#228B22'), color('#FFFFFF'), t1);
       fill(col1);
       vertex(x * scl, y * scl, h1);
 
   
       let h2 = terrain[x][y + 1];
       let t2 = map(h2, stripMin, stripMax, 0, 1);
-      let col2 = lerpColor(color('#00B31B'), color('#FFFFFF'), t2);
+      let col2 = lerpColor(color('#228B22'), color('#FFFFFF'), t2);
       fill(col2);
       vertex(x * scl, (y + 1) * scl, h2);
     }
