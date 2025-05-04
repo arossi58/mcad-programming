@@ -1,42 +1,326 @@
+@import url("https://fonts.googleapis.com/css2?family=Krona+One&display=swap");
+/*==================== Main Styles====================*/
+body {
+  font-family: "Krona One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  background-color: #181818;
+  color: white;
+  padding: 1rem;
+  height: 100svh;
+}
+
 #root {
-  max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
+  height: 100%;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  height: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 2rem;
   text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+h2 {
+  font-size: 0.75rem;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
+/*==================== Utilities ====================*/
+
+.flex-col {
+  display: flex;
+  flex-direction: column;
+}
+
+.secondary {
+  color: #a59e9e;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1c1c1c;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #c75b00;
+  border-radius: 5px;
+  border: 2px solid #1c1c1c;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #a84c00;
+}
+
+/*==================== Timer ====================*/
+.timer-display p {
+  font-size: 4rem;
+}
+
+/*==================== Name Input ====================*/
+.timer-input {
+  gap: 1rem;
+  align-items: center;
+  width: 100%;
+}
+
+.button-group {
+  width: 100%;
+  display: flex;
+  gap: 0.5rem;
+}
+
+label {
+  width: 100%;
+}
+
+input {
+  background-color: #1c1c1c;
+  color: white;
+  outline: 2px solid #c75b00;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+  margin-top: 0.25rem;
+}
+
+input:hover {
+  background-color: #3d3d3d;
+}
+
+input:disabled {
+  background-color: #202020;
+  outline: none;
+  pointer-events: none;
+}
+
+.button-group button {
+  width: 100%;
+}
+
+button,
+input[type="text"],
+.helper-text {
+  transition: background-color 0.3s ease, color 0.3s ease, outline 0.3s ease,
+    border 0.3s ease, opacity 0.3s ease;
+}
+
+.start-button {
+  background-color: #c75b00;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1.5rem;
+  font-weight: bold;
+}
+
+.stop-button {
+  background-color: transparent;
+  outline: 2px solid #c75b00;
+  border: none;
+  color: white;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1.5rem;
+  font-weight: bold;
+}
+
+.delete-button {
+  background: transparent;
+  border: none;
+  color: #c75b00;
+  border-radius: 8px;
+  width: 32px;
+  font-size: 1.25rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: #a84c00;
+}
+
+.stop-button:hover {
+  outline: 2px solid #a84c00;
+}
+
+.delete-button:hover {
+  color: #ffffff;
+}
+
+button:disabled {
+  pointer-events: none;
+  background-color: #555;
+  outline: none;
+  color: #a59e9e;
+}
+
+button:focus-visible,
+input:focus-visible {
+  outline: 2px solid #ffffff;
+  outline-offset: 2px;
+}
+
+.helper-text {
+  opacity: 0;
+  font-size: 0.75rem;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+  height: 1rem;
+}
+.helper-text.visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.check {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 0;
+}
+
+input[type="checkbox"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 32px;
+  height: 32px;
+  margin: 0;
+  cursor: pointer;
+  border: none;
+  border-radius: 8px;
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  vertical-align: middle;
+  transition: background-color 0.2s, border-color 0.2s;
+}
+
+input[type="checkbox"]:checked {
+  background-color: #c75b00;
+  border-color: #c75b00;
+}
+
+input[type="checkbox"]:checked::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 11px;
+  height: 20px;
+  border: solid white;
+  border-width: 0 4px 4px 0;
+  transform: translate(-50%, -60%) rotate(45deg);
+}
+
+/*====================Task Logs ====================*/
+.task-log {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  min-height: 0;
+  width: 100%;
+}
+
+.log-entries {
+  overflow-y: auto;
+  scrollbar-gutter: stable;
+}
+
+.log-row {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #a59e9e;
+}
+
+.log-task {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.log-duration,
+.log-date {
+  flex-shrink: 0;
+  text-align: left;
+}
+
+.log-duration {
+  width: 10rem;
+}
+
+.log-enter {
+  opacity: 0;
+  transform: translateY(-10px);
+  animation: fadeInDown 0.3s ease-out forwards;
+}
+
+@keyframes fadeInDown {
   to {
-    transform: rotate(360deg);
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+.log-row.deleting {
+  background-color: #c75b00;
+  color: white;
+  opacity: 0.5;
+  transform: scale(0.98);
+  opacity: 0;
+  transition: background-color 0.3s ease, color 0.3s ease, opacity 0.3s ease;
+}
+
+/*==================== On Mobile====================*/
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.5rem;
   }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+  .log-row {
+    gap: 0.5rem;
+  }
+  .log-duration {
+    width: auto;
+  }
+  .log-row {
+    flex-wrap: wrap;
+  }
+  .timer-display p {
+    font-size: 1.5rem;
+  }
+  .app {
+    gap: 0.5rem;
+  }
+  .log-row {
+    flex-wrap: wrap;
+  }
+  .log-task {
+    white-space: normal;
+    word-break: break-word;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 }
