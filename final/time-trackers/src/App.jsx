@@ -24,15 +24,28 @@ function App() {
 
   function msToLogString(ms) {
     const totalSeconds = Math.floor(ms / 1000);
-    const totalMinutes = Math.floor(totalSeconds / 60);
-    const hours = Math.floor(totalMinutes / 60);
-    const minutes = totalMinutes % 60;
-    return `${hours}H ${String(minutes).padStart(2, "0")}MIN`;
+    const minutes = Math.floor(totalSeconds / 60);
+    const seconds = totalSeconds % 60;
+    const hours = Math.floor(minutes / 60);
+    const remainingMinutes = minutes % 60;
+    if (minutes < 6 && hours === 0) {
+      return `${String(minutes).padStart(2, "0")}m ${String(seconds).padStart(
+        2,
+        "0"
+      )}s`;
+    }
+
+    return `${hours}h ${String(remainingMinutes).padStart(2, "0")}m`;
   }
 
-  function msToDecimalHours(ms) {
-    const hours = ms / (1000 * 60 * 60);
-    return `${hours.toFixed(2)}H`;
+  function msToDecimalStringForJira(ms) {
+    const totalMinutes = ms / (1000 * 60);
+    if (totalMinutes < 6) {
+      return `${totalMinutes.toFixed(2)}m`;
+    }
+
+    const hours = totalMinutes / 60;
+    return `${hours.toFixed(2)}h`;
   }
 
   useEffect(() => {
@@ -62,10 +75,8 @@ function App() {
     const newEntry = {
       id: Date.now(),
       name: taskName || "No name",
-
       duration: msToLogString(durationMs),
-
-      jiraDuration: msToDecimalHours(durationMs),
+      jiraDuration: msToDecimalStringForJira(durationMs),
       date,
     };
 
